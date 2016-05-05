@@ -4,16 +4,43 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>Calculator</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>
-            TODO write content
-            put your html here Ali
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+<input id="inputId" type="text" placeholder="result">
+
+<br/><br/>
+<button id="btn1" value="1" class="btn" name="btn1" onclick="btn1(this.value)">1</button>
+<button id="btn2" value="2" class="btn" name="btn2" onclick="btn2(this.value)">2</button>
+<button id="btn3" class="btn">3</button>
+<button id="btnPlus" class="btn" onclick="btnPlus()">+</button>
+<br />
+<button id="btn4" class="btn">4</button>
+<button id="btn5" class="btn">5</button>
+<button id="btn6" class="btn">6</button>
+<button id="btnMinus" class="btn">-</button>
+<br/>
+<button id="btn7" class="btn">7</button>
+<button id="btn8" class="btn">8</button>
+<button id="btn9" class="btn">9</button>
+<button id="btnDivision" class="btn">/</button>
+<br />
+<button id="btn0" class="btn">0</button>
+<button id="btnClear" class="btn" onclick="btnClear()">c</button>
+<button id="btnEqual" class="btn" onclick="btnEqual()">=</button>
+<button id="btnMultiply" class="btn">*</button>
+
+
+
+<script src="main.js"></script>
+</body>
 </html>
