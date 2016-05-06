@@ -12,33 +12,46 @@ and open the template in the editor.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css"/>
-
 </head>
 <body>
+<form id="mainForm" name="form">
 
-<input id="inputId" type="text" placeholder="result">
+    <input type="text" name="input" id="inputId" class="input" placeholder="0">
+    <br /><br />
 
-<br/><br/>
-<button id="btn1" value="1" class="btn" name="btn1" onclick="btn1(this.value)">1</button>
-<button id="btn2" value="2" class="btn" name="btn2" onclick="btn2(this.value)">2</button>
-<button id="btn3" class="btn">3</button>
-<button id="btnPlus" class="btn" onclick="btnPlus()">+</button>
-<br />
-<button id="btn4" class="btn">4</button>
-<button id="btn5" class="btn">5</button>
-<button id="btn6" class="btn">6</button>
-<button id="btnMinus" class="btn">-</button>
-<br/>
-<button id="btn7" class="btn">7</button>
-<button id="btn8" class="btn">8</button>
-<button id="btn9" class="btn">9</button>
-<button id="btnDivision" class="btn">/</button>
-<br />
-<button id="btn0" class="btn">0</button>
-<button id="btnClear" class="btn" onclick="btnClear()">c</button>
-<button id="btnEqual" class="btn" onclick="btnEqual()">=</button>
-<button id="btnMultiply" class="btn">*</button>
+    <div class="div">
+        <input type="button" id="btn1" class="btn" name="btn1" value="1" onclick='display(btn1.value)'>
+        <input type="button" id="btn2" class="btn" name="btn2" value="2" onclick='display(btn2.value)'>
+        <input type="button" id="btn3" class="btn" name="btn3" value="3" onclick='display(btn3.value)'>
+        <input type="button" id="btnPlus" class="btn" name="btnPlus" value="+" onclick='display(btnPlus.value)'>
+    </div>
 
+    <br />
+    <div class="div">
+        <input type="button" id="btn4" class="btn" name="btn4" value="4" onclick='display(btn4.value)'>
+        <input type="button" id="btn5" class="btn" name="btn5" value="5" onclick='display(btn5.value)'>
+        <input type="button" id="btn6" class="btn" name="btn6" value="6" onclick='display(btn6.value)'>
+        <input type="button" id="btnMinus" class="btn" name="btnMinus" value="-" onclick='display(btnMinus.value)'>
+    </div>
+    <br />
+    <div class="div">
+        <input type="button" id="btn7" class="btn" name="btn7" value="7" onclick='display(btn7.value)'>
+        <input type="button" id="btn8" class="btn" name="btn8" value="8" onclick='display(btn8.value)'>
+        <input type="button" id="btn9" class="btn" name="btn9" value="9" onclick='display(btn9.value)'>
+        <input type="button" id="btnMul" class="btn" name="btnMul" value="*" onclick='display(btnMul.value)'>
+    </div>
+
+    <br />
+    <div class="divM">
+        <input type="button" id="btn0" class="btnM" name="btn0" value="0" onclick='display(btn0.value)'>
+        <input type="button" id="btnDec" class="btnM" name="btnDec" value="." onclick='display(btnDec.value)'>
+        <input type="reset" id="btnClear" class="btnM" name="btnClear" value="c">
+        <input type="button" id="btnEqual" class="btnM" name="btnEqual" value="=" onclick='input.value =eval(input.value)'>
+        <input type="button" id="btnDiv"  class="btnM" name="btnDiv" value="/" onclick='display(btnDiv.value)'>
+    </div>
+
+
+</form>
 
 
 <script src="main.js"></script>
