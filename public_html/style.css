@@ -1,0 +1,54 @@
+#mainForm{
+    background-color: burlywood;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: 400px;
+}
+
+.input{
+    margin-top: 10px;
+    text-align: right;
+}
+
+#inputId {
+    width: 350px;
+    height: 25px;
+    margin-left: 25px;
+}
+
+.div {
+    margin-left: 25px;
+}
+
+.divM {
+    margin-left: 25px;
+}
+
+.btn {
+
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.btn:hover{
+    background-color: bisque;
+}
+
+.btnM {
+
+    width: 67px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.btnM:hover{
+    background-color: bisque;
+}
