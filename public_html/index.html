@@ -14,6 +14,7 @@ and open the template in the editor.
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+<button onclick="showToggle()" id="showBtn">Show Calculator</button>
 <form id="mainForm" name="form">
 
     <input type="text" name="input" id="inputId" class="input" placeholder="0">
@@ -45,8 +46,8 @@ and open the template in the editor.
     <div class="divM">
         <input type="button" id="btn0" class="btnM" name="btn0" value="0" onclick='display(btn0.value)'>
         <input type="button" id="btnDec" class="btnM" name="btnDec" value="." onclick='display(btnDec.value)'>
-        <input type="reset" id="btnClear" class="btnM" name="btnClear" value="c">
-        <input type="button" id="btnEqual" class="btnM" name="btnEqual" value="=" onclick='input.value =eval(input.value)'>
+        <input type="reset" id="btnClear" class="btnM" name="btnClear" value="c" onclick="clear()">
+        <input type="button" id="btnEqual" class="btnM" name="btnEqual" value="=" onclick='input.value =calc()'>
         <input type="button" id="btnDiv"  class="btnM" name="btnDiv" value="/" onclick='display(btnDiv.value)'>
     </div>
 

@@ -1,9 +1,16 @@
 #mainForm{
-    background-color: burlywood;
+    background-color:tan;
     width: 400px;
     height: 300px;
     border-radius: 5px;
     margin-left: 400px;
+    display: none;
+}
+
+#mainForm{
+    overflow-y: hidden;
+    max-height: 500px;
+    transition-property: all;
 }
 
 .input{
@@ -51,4 +58,19 @@
 
 .btnM:hover{
     background-color: bisque;
+}
+
+#showBtn{
+    margin-top: 50px;
+    height: 40px;
+    width: 150px;
+    background-color: brown;
+    color: white;
+    animation-name: change;
+    animation-duration: 50s;
+}
+
+@-webkit-keyframes change {
+    from {background-color:brown}
+    to {background-color: aqua}
 }
