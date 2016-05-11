@@ -3,28 +3,57 @@
  */
 
 //show all clicked item's content in the text box
-
-
 function display(value) {
     clear();
     form.inputId.value += value;
 
 }
 
+
+//executed when = in clicked
 function calc() {
 
     reset = true;
-    var reg = /(^(\d+\.{1}\d+)|^(\d+))([-+*\/]{1})((\d+\.{1}\d+)|(\d+))$/g;
+
+    //reg matches 1+2+3 but switch doesn't
+    var reg = /(((^(\d+\.{1}\d+)|^(\d+))([-+*\/]{1})((\d+\.{1}\d+)|(\d+))$)*)/g;
 
     if (reg.test(form.inputId.value)){
-        return eval(form.inputId.value);
+        //return eval(form.inputId.value);
+        var x = form.inputId.value;
+
+        // s returns just all numbers, not operators
+        var s = x.match(/(\d+\.{1}\d+)|(\d+)/g);
+
+        //operators returns one of the operators
+        var operators = x.match(/[-+*\/]{1}/g);
+
+        //join changes ["+"] to "+"
+        var operator = operators.join();
     }
     else{
         return 'Invalid Input!';
     }
-}
 
-//executed when = in clicked
+    switch (operator){
+        case "-":
+            form.inputId.value = Number(s[0]) - Number(s[1]);
+            break;
+        case "+":
+            form.inputId.value = Number(s[0]) + Number(s[1]);
+            break;
+        case '*':
+            form.inputId.value = Number(s[0]) * Number(s[1]);
+            break;
+        case '/':
+            form.inputId.value = Number(s[0]) / Number(s[1]);
+            break;
+        default :
+            form.inputId.value = "Error!!";
+    }
+
+    return form.inputId.value;
+}
 
 
 //show or hide the calculator
