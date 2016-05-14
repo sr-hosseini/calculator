@@ -50,6 +50,24 @@ and open the template in the editor.
         <input type="button" id="btnEqual" class="btnM" name="btnEqual" value="=" onclick='input.value =calc()'>
         <input type="button" id="btnDiv"  class="btnM" name="btnDiv" value="/" onclick='display(btnDiv.value)'>
     </div>
+    <br />
+    <div class="divM">
+        <input type="button" id="btnCE" class="btnM" name="btnCE" value="CE" onclick="clearCE()"/>
+        <input type="button" id="btnBack" class="btnM" name="btnBack" value="<--" onclick="clearBack()"/>
+        <input type="button" id="btnFact" class="btnM" name="btnFact" value="n!" onclick="fact(inputId.value)"/>
+        <input type="button" id="btnSqrt" class="btnM" name="btnSqrt" value="√" onclick="sRoot()"/>
+        <input type="button" id="btnEx" class="btnM" name="btnEx" value="e" onclick="exponent()"/>
+
+    </div>
+    <br />
+    <div class="divM">
+        <input type="button" id="btnSin" class="btnM" name="btnSin" value="Sin" onclick="sin(inputId.value)"/>
+        <input type="button" id="btnCos" class="btnM" name="btnCos" value="Cos" onclick="cos(inputId.value)"/>
+        <input type="button" id="btnTan" class="btnM" name="btnTan" value="Tan" onclick="tan(inputId.value)"/>
+        <input type="button" id="btnCot" class="btnM" name="btnCot" value="Cot" onclick="cot(inputId.value)"/>
+        <input type="button" id="btnRandom" class="btnM" name="btnRandom" value="Random" onclick="random()"/>
+
+    </div>
 
 
 </form>

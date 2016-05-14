@@ -1,9 +1,9 @@
 #mainForm{
     background-color:tan;
     width: 400px;
-    height: 300px;
+    height: 400px;
     border-radius: 5px;
-    margin-left: 400px;
+    margin-left: 0px;
     display: none;
 }
 
@@ -74,3 +74,4 @@
     from {background-color:brown}
     to {background-color: aqua}
 }
+

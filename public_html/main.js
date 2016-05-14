@@ -25,6 +25,8 @@ function calc() {
         // s returns just all numbers, not operators
         var s = x.match(/(\d+\.{1}\d+)|(\d+)/g);
 
+        //console.log(x);
+        //console.log(s);
         //operators returns one of the operators
         var operators = x.match(/[-+*\/]{1}/g);
 
@@ -35,23 +37,31 @@ function calc() {
         return 'Invalid Input!';
     }
 
-    switch (operator){
-        case "-":
-            form.inputId.value = Number(s[0]) - Number(s[1]);
-            break;
-        case "+":
-            form.inputId.value = Number(s[0]) + Number(s[1]);
-            break;
-        case '*':
-            form.inputId.value = Number(s[0]) * Number(s[1]);
-            break;
-        case '/':
-            form.inputId.value = Number(s[0]) / Number(s[1]);
-            break;
-        default :
-            form.inputId.value = "Error!!";
-    }
 
+// k is an array that holds the calculation of the number array and employs ane of the
+// operators and stores them. at the end it returns the value of the last house of itself as the final calculation
+    var k = [];
+    var i=0;
+    k[i-1] = Number(s[i]);
+    for(i=0; i<operators.length; i++){
+        switch (operators[i]){
+            case "-":
+                k[i] = k[i-1] - Number(s[i+1]);
+                break;
+            case "+":
+                k[i] = k[i-1] + Number(s[i+1]);
+                break;
+            case '*':
+                k[i] = k[i-1] * Number(s[i+1]);
+                break;
+            case '/':
+                k[i] = k[i-1] / Number(s[i+1]);
+                break;
+            default :
+                form.inputId.value = "Error!!";
+        }
+    }
+    form.inputId.value = k[i-1];
     return form.inputId.value;
 }
 
@@ -81,4 +91,91 @@ function clear(){
         form.inputId.value = "";
     }
     reset = false;
+}
+
+//This function clears the last item entered
+function clearCE(){
+    var x = form.inputId.value;
+    var s = x.match(/((\d+\.{1}\d+)|(\d+))|([-+*\/]{1})/g);
+    var arr = [];
+    if(s.length != null) {
+        for (var i = 0; i < s.length; i++) {
+            arr[i] = s[i];
+        }
+    }
+        else{
+            form.inputId.value = "";
+        }
+
+    if(arr != null){
+        arr.pop();
+    }
+
+    form.inputId.value = arr;
+    return form.inputId.value;
+
+}
+
+//this function clears the last character
+function clearBack(){
+    var x = form.inputId.value;
+
+    //substring extracts the characters in a string between "start" and "end", not including "end" itself.
+
+    x = x.substring(0, x.length - 1);
+    form.inputId.value = x;
+    return form.inputId.value;
+}
+
+//Calculate Factorial
+function fact(n){
+    var x = 0;
+    clear();
+
+    if (n===1 || n===0){
+        return 1;
+    }
+    else{
+        x = n*fact(n-1);
+    }
+     form.inputId.value= x;
+    return form.inputId.value;
+}
+
+
+function sRoot(){
+    var m = form.inputId.value;
+    var n = Math.sqrt(m);
+    form.inputId.value = n;
+    return form.inputId.value;
+}
+
+function exponent(){
+    form.inputId.value = Math.E;
+    return form.inputId.value;
+}
+
+function sin(n){
+    form.inputId.value = Math.sin(n);
+    return form.inputId.value;
+}
+
+function cos(n){
+    form.inputId.value = Math.cos(n);
+    return form.inputId.value;
+}
+
+function tan(n){
+    form.inputId.value = Math.tan(n);
+    return form.inputId.value;
+}
+
+function cot(n){
+    form.inputId.value = 1/Math.tan(n);
+    return form.inputId.value;
+}
+
+function random(n){
+    form.inputId.value = Math.random();
+    return form.inputId.value;
 }
