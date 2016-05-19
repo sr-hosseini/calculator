@@ -96,22 +96,32 @@ function clear(){
 //This function clears the last item entered
 function clearCE(){
     var x = form.inputId.value;
+    console.log(x);
     var s = x.match(/((\d+\.{1}\d+)|(\d+))|([-+*\/]{1})/g);
-    var arr = [];
-    if(s.length != null) {
-        for (var i = 0; i < s.length; i++) {
-            arr[i] = s[i];
+    console.log(s);
+    var str = "";
+    try{
+        if (s.length != null) {
+            for (var i = 0; i < s.length - 1; i++) {
+                str += s[i];
+                //console.log(str);
+            }
+        }
+        else
+        {
+            form.inputId.value = "Empty";
         }
     }
-        else{
-            form.inputId.value = "";
-        }
-
-    if(arr != null){
-        arr.pop();
+    catch(e){
+        form.inputId.value = e.source;
     }
 
-    form.inputId.value = arr;
+
+    //if(arr != null){
+    //    arr.pop();
+    //}
+
+    form.inputId.value = str;
     return form.inputId.value;
 
 }
