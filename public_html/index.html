@@ -4,16 +4,75 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>Calculator</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>
-            TODO write content
-            put your html here Ali
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<button onclick="showToggle()" id="showBtn">Show Calculator</button>
+<form id="mainForm" name="form">
+
+    <input type="text" name="input" id="inputId" class="input" placeholder="0">
+    <br /><br />
+
+    <div class="div">
+        <input type="button" id="btn1" class="btn" name="btn1" value="1" onclick='display(btn1.value)'>
+        <input type="button" id="btn2" class="btn" name="btn2" value="2" onclick='display(btn2.value)'>
+        <input type="button" id="btn3" class="btn" name="btn3" value="3" onclick='display(btn3.value)'>
+        <input type="button" id="btnPlus" class="btn" name="btnPlus" value="+" onclick='display(btnPlus.value)'>
+    </div>
+
+    <br />
+    <div class="div">
+        <input type="button" id="btn4" class="btn" name="btn4" value="4" onclick='display(btn4.value)'>
+        <input type="button" id="btn5" class="btn" name="btn5" value="5" onclick='display(btn5.value)'>
+        <input type="button" id="btn6" class="btn" name="btn6" value="6" onclick='display(btn6.value)'>
+        <input type="button" id="btnMinus" class="btn" name="btnMinus" value="-" onclick='display(btnMinus.value)'>
+    </div>
+    <br />
+    <div class="div">
+        <input type="button" id="btn7" class="btn" name="btn7" value="7" onclick='display(btn7.value)'>
+        <input type="button" id="btn8" class="btn" name="btn8" value="8" onclick='display(btn8.value)'>
+        <input type="button" id="btn9" class="btn" name="btn9" value="9" onclick='display(btn9.value)'>
+        <input type="button" id="btnMul" class="btn" name="btnMul" value="*" onclick='display(btnMul.value)'>
+    </div>
+
+    <br />
+    <div class="divM">
+        <input type="button" id="btn0" class="btnM" name="btn0" value="0" onclick='display(btn0.value)'>
+        <input type="button" id="btnDec" class="btnM" name="btnDec" value="." onclick='display(btnDec.value)'>
+        <input type="reset" id="btnClear" class="btnM" name="btnClear" value="c" onclick="clear()">
+        <input type="button" id="btnEqual" class="btnM" name="btnEqual" value="=" onclick='input.value =calc()'>
+        <input type="button" id="btnDiv"  class="btnM" name="btnDiv" value="/" onclick='display(btnDiv.value)'>
+    </div>
+    <br />
+    <div class="divM">
+        <input type="button" id="btnCE" class="btnM" name="btnCE" value="CE" onclick="clearCE()"/>
+        <input type="button" id="btnBack" class="btnM" name="btnBack" value="<--" onclick="clearBack()"/>
+        <input type="button" id="btnFact" class="btnM" name="btnFact" value="n!" onclick="fact(inputId.value)"/>
+        <input type="button" id="btnSqrt" class="btnM" name="btnSqrt" value="√" onclick="sRoot()"/>
+        <input type="button" id="btnEx" class="btnM" name="btnEx" value="e" onclick="exponent()"/>
+
+    </div>
+    <br />
+    <div class="divM">
+        <input type="button" id="btnSin" class="btnM" name="btnSin" value="Sin" onclick="sin(inputId.value)"/>
+        <input type="button" id="btnCos" class="btnM" name="btnCos" value="Cos" onclick="cos(inputId.value)"/>
+        <input type="button" id="btnTan" class="btnM" name="btnTan" value="Tan" onclick="tan(inputId.value)"/>
+        <input type="button" id="btnCot" class="btnM" name="btnCot" value="Cot" onclick="cot(inputId.value)"/>
+        <input type="button" id="btnRandom" class="btnM" name="btnRandom" value="Random" onclick="random()"/>
+
+    </div>
+
+
+</form>
+
+
+<script src="main.js"></script>
+</body>
 </html>

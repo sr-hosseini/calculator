@@ -1,0 +1,77 @@
+#mainForm{
+    background-color:tan;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    margin-left: 0px;
+    display: none;
+}
+
+#mainForm{
+    overflow-y: hidden;
+    max-height: 500px;
+    transition-property: all;
+}
+
+.input{
+    margin-top: 10px;
+    text-align: right;
+}
+
+#inputId {
+    width: 350px;
+    height: 25px;
+    margin-left: 25px;
+}
+
+.div {
+    margin-left: 25px;
+}
+
+.divM {
+    margin-left: 25px;
+}
+
+.btn {
+
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.btn:hover{
+    background-color: bisque;
+}
+
+.btnM {
+
+    width: 67px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.btnM:hover{
+    background-color: bisque;
+}
+
+#showBtn{
+    margin-top: 50px;
+    height: 40px;
+    width: 150px;
+    background-color: brown;
+    color: white;
+    animation-name: change;
+    animation-duration: 50s;
+}
+
+@-webkit-keyframes change {
+    from {background-color:brown}
+    to {background-color: aqua}
+}
+
