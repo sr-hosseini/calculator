@@ -9,7 +9,6 @@ function display(value) {
 
 }
 
-
 //executed when = in clicked
 function calc() {
 
@@ -37,9 +36,8 @@ function calc() {
         return 'Invalid Input!';
     }
 
-
-// k is an array that holds the calculation of the number array and employs ane of the
-// operators and stores them. at the end it returns the value of the last house of itself as the final calculation
+    // k is an array that holds the calculation of the number array and employs ane of the
+    // operators and stores them. at the end it returns the value of the last house of itself as the final calculation
     var k = [];
     var i=0;
     k[i-1] = Number(s[i]);
